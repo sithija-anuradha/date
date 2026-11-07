@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#08090f" />
+  <title>A Little Question ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-heart">♥</span> a little plan</div>
+      <div class="step-indicator" id="stepIndicator">01 <span>/</span> 03</div>
+    </header>
+
+    <section class="page active" id="page1" aria-labelledby="mainQuestion">
+      <div class="hero-heart" aria-hidden="true">♡</div>
+      <p class="eyebrow">A tiny question for you</p>
+      <h1>Hey… <span class="wink">😉</span></h1>
+      <p class="question" id="mainQuestion">Would you like to go on a date with me…? <span>❤️</span></p>
+      <p class="subtext">I promise it'll be a lovely little adventure.</p>
+      <div class="choice-area">
+        <button class="btn btn-yes" id="yesBtn">Yes 😛</button>
+        <button class="btn btn-no" id="noBtn">No 😑</button>
+      </div>
+      <p class="tiny-note" id="noMessage" aria-live="polite">Choose honestly… but I hope it's yes. ✨</p>
+    </section>
+
+    <section class="page" id="page2" aria-labelledby="planTitle">
+      <div class="section-icon">🌙</div>
+      <p class="eyebrow">Let's make it happen</p>
+      <h2 id="planTitle">Select date, time<br>and venue <span>😍</span></h2>
+      <div class="form-card">
+        <label for="dateInput">Date 📅</label>
+        <input id="dateInput" type="date" />
+        <label for="timeInput">Time 🕖</label>
+        <input id="timeInput" type="time" />
+        <label for="venueInput">Venue 🌏</label>
+        <input id="venueInput" type="text" placeholder="Where should we meet?" maxlength="120" />
+      </div>
+      <p class="tiny-note" id="planError" aria-live="polite"></p>
+      <button class="btn btn-primary" id="toFoodBtn">Next <span>→</span></button>
+      <button class="text-btn back-btn" data-back="1">← Back</button>
+    </section>
+
+    <section class="page page-food" id="page3" aria-labelledby="foodTitle">
+      <div class="section-icon">🎈</div>
+      <p class="eyebrow">Uwuuuuuu…</p>
+      <h2 id="foodTitle">So, what would you like<br>to eat and drink? <span>🙄</span></h2>
+      <p class="subtext">Select as many as you like. No pressure!</p>
+      <div class="food-grid" id="foodGrid"></div>
+      <div class="suggestion-card">
+        <label for="suggestionInput">Any suggestions? 😋 <span class="muted">(up to 5)</span></label>
+        <div class="suggestion-entry">
+          <input id="suggestionInput" type="text" placeholder="Type something not on the list…" maxlength="60" />
+          <button class="add-btn" id="addSuggestionBtn" aria-label="Add suggestion">+</button>
+        </div>
+        <ul id="suggestionList" class="suggestion-list"></ul>
+        <p class="tiny-note" id="suggestionError" aria-live="polite"></p>
+      </div>
+      <div class="estimate-card">
+        <div><span class="muted">Estimated food & drink cost</span><strong id="totalCost">LKR 0</strong></div>
+        <p class="tiny-note">Planning estimate only. Actual prices depend on the restaurant and portion size.</p>
+      </div>
+      <div class="location-card">
+        <label for="locationInput">Find places near the venue 📍</label>
+        <input id="locationInput" type="text" placeholder="Venue or area (e.g. Negombo)" />
+        <button class="btn btn-outline" id="findPlacesBtn">Find nearby places ↗</button>
+        <p class="tiny-note" id="locationHelp">Opens a Google Maps search for food and drink places near your chosen area.</p>
+        <div id="mapLinks" class="map-links"></div>
+      </div>
+      <p class="tiny-note" id="finalError" aria-live="polite"></p>
+      <button class="btn btn-primary" id="finalizeBtn">Finalize <span>→</span></button>
+      <button class="text-btn back-btn" data-back="2">← Back</button>
+    </section>
+
+    <section class="page" id="successPage">
+      <div class="success-icon">💌</div>
+      <p class="eyebrow">It's a plan!</p>
+      <h2>One lovely date<br>coming up. <span>✨</span></h2>
+      <div class="receipt" id="receipt"></div>
+      <button class="btn btn-primary" id="emailBtn">Send my plan by email <span>♥</span></button>
+      <p class="tiny-note" id="emailStatus" aria-live="polite"></p>
+      <button class="text-btn" id="restartBtn">Start again</button>
+    </section>
+
+    <footer>made with a little courage <span>♥</span></footer>
+  </main>
+
+  <!-- Optional EmailJS integration. Add your IDs in app.js to enable email delivery. -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
