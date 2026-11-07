@@ -1,10 +1,10 @@
 // ===================== CONFIGURATION =====================
 // Optional EmailJS setup: create a service + email template at https://www.emailjs.com/
 // Then enter your public key, service ID, template ID and destination email in the template.
-const EMAILJS_PUBLIC_KEY = "YOUR_EMAILJS_PUBLIC_KEY";
-const EMAILJS_SERVICE_ID = "YOUR_EMAILJS_SERVICE_ID";
-const EMAILJS_TEMPLATE_ID = "YOUR_EMAILJS_TEMPLATE_ID";
-const OWNER_EMAIL = "your-email@example.com";
+const EMAILJS_PUBLIC_KEY = "zQrblugJvuwbl58hC";
+const EMAILJS_SERVICE_ID = "service_z0058hn";
+const EMAILJS_TEMPLATE_ID = "template_7rnwpzs";
+const OWNER_EMAIL = "sithijaanuradhalap2004@gmail.com";
 
 // Approximate Sri Lankan menu estimates in LKR. Edit these to match your area.
 const MENU = [
